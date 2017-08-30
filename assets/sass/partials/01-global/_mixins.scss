@@ -1,0 +1,206 @@
+
+
+// ==========
+// ADD-CONTEXT
+// -----
+// Adds current context to the $contexts map that is used
+// to store all contexts for all susy items for its children
+//
+// USAGE:
+// -----
+// If parent context was previously declared,
+// use with either nested or susy-breakpoint:
+//
+// .no-parent {
+//   @include susy-breakpoint(600px, 9) {
+//     @include add-context(content, med, 6)
+//   }
+// }
+//
+// If parent context was declared previously,
+// use with get-context:
+//
+// .has-parent {
+//   @include get-context(content, med) {
+//     @include add-context(gallery, med, 3);
+//   }
+// }
+// ==========
+
+
+/// @author Vova Skok
+/// @content Styles which go inside of chosen breakpoint
+/// @throw "Invalid breakpoint `#{$name}`"
+/// @example
+///  @include breakpoint(small);
+/// @output
+/// `@media (min-width: 480px) {
+///		// Styles
+/// }`
+/// @require {variable} $breakpoints
+
+
+
+@mixin add-context($layout, $breakpoint, $span, $location: null) {
+  @if type-of($location) == "string" {
+    $contexts: _susy-deep-set($contexts, $layout, $breakpoint, $span of susy-get(columns) susy-get(gutter) $location) !global;
+  } @else {
+    $contexts: _susy-deep-set($contexts, $layout, $breakpoint, $span of susy-get(columns) susy-get(gutter) at $location) !global;
+  }
+}
+
+// ==========
+// GET-CONTEXT
+// -----
+// Gets the context from the $contexts map and include a
+// nested wrapper to use with the contents of the context.
+//
+// Usage:
+// ------
+//
+// .test {
+//   @include breakpoint(large) {
+//      @include get-context(content,large) {
+//        @include span(6);
+//      }
+//   }
+// }
+//
+// ==========
+@mixin get-context($keys...) {
+  $context: get-context($keys...);
+  @include nested($context) {
+    @content;
+  }
+}
+
+
+/// Clearfix for IE8 & above
+/// @source http://css-tricks.com/snippets/css/clear-fix/
+@mixin cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+/// Image replacement mixin
+/// Replaces text with background images.
+/// Requires inline-block or block display
+/// @source http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+
+/// Makes element invisible!
+/// *Remains visible for accessibility*
+/// @source http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin is-invisible {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+
+
+/// Turns off the element-invisible effect.
+@mixin is-visible {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+
+
+/// Changes input Placeholder color
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+
+/// Changes background color and text color when text is selected
+@mixin selection($bgColor, $textColor) {
+  &::-moz-selection {
+    background: $bgColor;
+    color: $textColor;
+  }
+  &::selection {
+    background: $bgColor;
+    color: $textColor;
+  }
+}
+
+
+///Shapes mixin: circle
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  border-radius: 100%;
+}
+
+///Shapes mixin: triangle
+@mixin triangle($dir, $size, $color) {
+  border: $size transparent solid;
+  @if $dir == "top" or $dir == "up" {
+    border-bottom-color: $color;
+  } @else if $dir == "right" or $dir == "after" {
+    border-left-color: $color;
+  } @else if $dir == "bottom" or $dir == "down" {
+    border-top-color: $color;
+  } @else if $dir == "left" or $dir == "before" {
+    border-right-color: $color;
+  }
+}
+
+
+/// Keep the footer at the bottom of the site
+/// @example
+///   @include sticky-footer(20em, "#site", "#push", "#footer");
+/// @source http://codepen.io/zoerooney/pen/vtdFw
+/// @author Zoe Rooney
+@mixin sticky-footer($footer-height, $wrapper-selector: unquote("#site"), $container-selector: unquote("#wrap-all"), $footer-selector: unquote("#footer")) {
+  html, body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #{$wrapper-selector} {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -$footer-height;
+    #{$container-selector} {
+      padding: 0 0 $footer-height 0;
+    }
+  }
+  #{$footer-selector} {
+    height: $footer-height;
+  }
+}

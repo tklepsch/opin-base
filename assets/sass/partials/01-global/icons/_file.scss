@@ -1,0 +1,76 @@
+.file--general,
+.file--application-octet-stream {
+  background-image: url(../images/icons/file-exe.svg);
+}
+.file--package-x-generic {
+  background-image: url(../images/icons/file-generic.svg);
+}
+.file--x-office-spreadsheet {
+  background-image: url(../images/icons/file-xls.svg);
+}
+.file--x-office-document {
+  background-image: url(../images/icons/file-doc.svg);
+}
+.file--x-office-presentation {
+  background-image: url(../images/icons/file-ppt.svg);
+}
+.file--text-x-script {
+  background-image: url(../images/icons/file-js.svg);
+}
+.file--text-html {
+  background-image: url(../images/icons/file-html.svg);
+}
+.file--text-plain {
+  background-image: url(../images/icons/text-plain.png);
+}
+.file--application-pdf {
+  background-image: url(../images/icons/file-pdf.svg);
+
+}
+.file--application-x-executable {
+  background-image: url(../images/icons/file-exe.svg);
+}
+.file--audio {
+  background-image: url(../images/icons/file-mp3.svg);
+
+}
+.file--video {
+  background-image: url(../images/icons/file-mp4.svg);
+
+}
+.file--text {
+  background-image: url(../images/icons/file-txt.svg);
+
+}
+.file--image {
+  background-image: url(../images/icons/file-jpg.svg);
+}
+
+.file--mime-application-postscript {
+  background-image: url(../images/icons/file-eps.svg);
+}
+
+.file{
+  background-size: 16px auto;
+  background-position: left top;
+}
+
+a[data-entity-type="file"]{
+  position: relative;
+  margin-left: 1rem;
+  font-weight: 500;
+  border-bottom: 1px dotted;
+
+  &:before{
+    position: absolute;
+    content: ' ';
+    width: .75rem;
+    height: 1rem;
+    left: -.9rem;
+    top: .12rem;
+    background-image: url(../images/icons/attach-2.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+}

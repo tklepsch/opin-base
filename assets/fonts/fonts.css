@@ -1,0 +1,147 @@
+body{
+
+}
+
+
+/* NORMAL */
+@font-face{
+	font-family: 'Apex Rounded';
+	src: url('ApexRounded/ApexRounded-Book.eot');
+	src: url('ApexRounded/ApexRounded-Book.eot?#iefix') format('embedded-opentype'),
+	     url('ApexRounded/ApexRounded-Book.woff') format('woff'),
+	     url('ApexRounded/ApexRounded-Book.svg#ApexRounded-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* NORMAL ITALIC*/
+@font-face{
+	font-family: 'Apex Rounded';
+	src: url('ApexRounded/ApexRounded-BookItalic.eot');
+	src: url('ApexRounded/ApexRounded-BookItalic.eot?#iefix') format('embedded-opentype'),
+	     url('ApexRounded/ApexRounded-BookItalic.woff') format('woff'),
+	     url('ApexRounded/ApexRounded-BookItalic.svg#ApexRounded-BookItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* MEDIUM 500*/
+@font-face{
+	font-family: 'Apex Rounded';
+	src: url('ApexRounded/ApexRounded-Medium.eot');
+	src: url('ApexRounded/ApexRounded-Medium.eot?#iefix') format('embedded-opentype'),
+	     url('ApexRounded/ApexRounded-Medium.woff') format('woff'),
+	     url('ApexRounded/ApexRounded-Medium.svg#ApexRounded-Medium') format('svg');
+	font-weight: 500;
+  font-style: normal;
+}
+
+/* BOLD 700*/
+@font-face{
+	font-family: 'Apex Rounded';
+	src: url('ApexRounded/ApexRounded-Bold.eot');
+	src: url('ApexRounded/ApexRounded-Bold.eot?#iefix') format('embedded-opentype'),
+	     url('ApexRounded/ApexRounded-Bold.woff') format('woff'),
+	     url('ApexRounded/ApexRounded-Bold.svg#ApexRounded-Bold') format('svg');
+  font-weight: bold;
+	font-weight: 700;
+  font-style: normal;
+}
+
+/* BOLD ITALIC*/
+@font-face{
+	font-family: 'Apex Rounded';
+	src: url('ApexRounded/ApexRounded-BoldItalic.eot');
+	src: url('ApexRounded/ApexRounded-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	     url('ApexRounded/ApexRounded-BoldItalic.woff') format('woff'),
+	     url('ApexRounded/ApexRounded-BoldItalic.svg#ApexRounded-BoldItalic') format('svg');
+  font-weight: bold;
+	font-weight: 700;
+  font-style: italic;
+}
+
+ /*HEAVY 900*/
+@font-face{
+	font-family: 'Apex Rounded';
+	src: url('ApexRounded/ApexRounded-Heavy.eot');
+	src: url('ApexRounded/ApexRounded-Heavy.eot?#iefix') format('embedded-opentype'),
+	     url('ApexRounded/ApexRounded-Heavy.woff') format('woff'),
+	     url('ApexRounded/ApexRounded-Heavy.ttf') format('truetype'),
+	     url('ApexRounded/ApexRounded-Heavy.svg#webfont') format('svg');
+  font-weight: bold;
+	font-weight: 900;
+  font-style: normal;
+}
+
+
+
+/*APEX NEW*/
+
+/* NORMAL */
+@font-face{
+	font-family: 'Apex New';
+	src: url('ApexNew/ApexNewWeb-Book.eot');
+	src: url('ApexNew/ApexNewWeb-Book.eot?#iefix') format('embedded-opentype'),
+	     url('ApexNew/ApexNewWeb-Book.woff') format('woff'),
+	     url('ApexNew/ApexNewWeb-Book.svg#ApexNewWeb-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ITALIC */
+@font-face{
+	font-family: 'Apex New';
+	src: url('ApexNew/ApexNewWeb-BookItalic.eot');
+	src: url('ApexNew/ApexNewWeb-BookItalic.eot?#iefix') format('embedded-opentype'),
+	     url('ApexNew/ApexNewWeb-BookItalic.woff') format('woff'),
+	     url('ApexNew/ApexNewWeb-BookItalic.svg#ApexNewWeb-BookItalic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* MEDIUM 500*/
+@font-face{
+	font-family: 'Apex New';
+	src: url('ApexNew/ApexNewWeb-Medium.eot');
+	src: url('ApexNew/ApexNewWeb-Medium.eot?#iefix') format('embedded-opentype'),
+	     url('ApexNew/ApexNewWeb-Medium.woff') format('woff'),
+	     url('ApexNew/ApexNewWeb-Medium.svg#ApexNewWeb-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* BOLD 700*/
+@font-face{
+	font-family: 'Apex New';
+	src: url('ApexNew/ApexNewWeb-Bold.eot');
+	src: url('ApexNew/ApexNewWeb-Bold.eot?#iefix') format('embedded-opentype'),
+	     url('ApexNew/ApexNewWeb-Bold.woff') format('woff'),
+	     url('ApexNew/ApexNewWeb-Bold.svg#ApexNewWeb-Bold') format('svg');
+			 font-weight: bold;
+		 	 font-weight: 700;
+		   font-style: normal;
+}
+
+/* BOLD 700 Italic*/
+@font-face{
+	font-family: 'Apex New';
+	src: url('ApexNew/ApexNewWeb-BoldItalic.eot');
+	src: url('ApexNew/ApexNewWeb-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	     url('ApexNew/ApexNewWeb-BoldItalic.woff') format('woff'),
+	     url('ApexNew/ApexNewWeb-BoldItalic.svg#ApexNewWeb-BoldItalic') format('svg');
+			 font-weight: bold;
+		 	 font-weight: 700;
+		   font-style: italic;
+}
+
+/* BOLD 700 Italic*/
+@font-face{
+	font-family: 'Apex New';
+	src: url('ApexNew/ApexNewWeb-Heavy.eot');
+	src: url('ApexNew/ApexNewWeb-Heavy.eot?#iefix') format('embedded-opentype'),
+	     url('ApexNew/ApexNewWeb-Heavy.woff') format('woff'),
+	     url('ApexNew/ApexNewWeb-Heavy.svg#ApexNewWeb-Heavy') format('svg');
+		 	 font-weight: 900;
+		   font-style: normal;
+}

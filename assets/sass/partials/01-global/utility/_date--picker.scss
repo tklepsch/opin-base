@@ -1,0 +1,34 @@
+
+.picker__day--highlighted:hover,
+.picker--focused
+.picker__day--highlighted {
+
+}
+
+//dafault date picker
+.ui-datepicker {
+  font-family: $font-family;
+  border-radius: 0;
+}
+
+.ui-datepicker-header{
+  border-radius: 0;
+}
+
+.ui-widget-header {
+  background: none;
+  background-color: palette(global, grey-light);
+  border: 0;
+}
+
+.ui-state-default,
+.ui-widget-content
+.ui-state-default{
+  background: none;
+  background-color: palette(global, grey-pale);
+}
+
+
+.ui-state-highlight{
+  border: 1px solid $yellow !important;
+}

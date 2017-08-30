@@ -1,0 +1,33 @@
+name: Opin Base
+type: theme
+description: 'A base theme created by Opin and based upon classy theme.'
+core: 8.x
+libraries:
+  - opin-base/global-styling
+  - opin-base/global-js
+
+# Base Theme
+base theme: classy
+
+# Regions
+regions:
+  header: Header
+  prefix: Prefix
+  content: Content
+  suffix: Suffix
+  footer: Footer
+
+ckeditor_stylesheets:
+  - assets/css/ckeditor.css
+
+# Remove stylesheets.
+# stylesheets-remove:
+#   - core/assets/vendor/normalize-css/normalize.css
+#   - core/themes/classy/css/components/details.css
+
+features:
+  - comment_user_verification
+  - comment_user_picture
+  - favicon
+  - logo
+  - node_user_picture

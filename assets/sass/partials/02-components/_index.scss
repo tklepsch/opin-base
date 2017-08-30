@@ -1,0 +1,12 @@
+////////////////////////
+// Module Partials
+//
+// Your SMACSS Modules go here
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+////////////////////////
+
+
+
+@import 'nav/index';
+@import 'custom-blocks/index';
+@import "taxonomies/index";

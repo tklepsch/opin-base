@@ -1,0 +1,64 @@
+////////////////////////
+// Layouts Partials
+//
+// Your SMACSS Layouts go here
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+////////////////////////
+
+.layout--main{
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  clear: both;
+}
+
+
+
+.layout--content {
+  @extend %cf;
+
+  @include span(12 of 12);
+
+
+  .sidebar-second & {
+    @extend %cf;
+
+    @include span(12 of 12);
+
+    @include mappy-bp(tablet-portrait) {
+      @include span(first 8 of 12);
+    }
+
+    @include mappy-bp(tablet-landscape) {
+      // @include span(first 8 of 12);
+    }
+  }
+}
+
+.layout--sidebar-second {
+  @extend %cf;
+  padding-top: vr(1);
+
+  @include mappy-bp(tablet-portrait) {
+    padding-top: 0;
+    margin-top: 5rem;
+  };
+
+
+  .sidebar-second & {
+    @include span(12 of 12);
+
+    @include mappy-bp(tablet-portrait) {
+      @include span(last 4 of 12);
+    }
+
+    @include mappy-bp(tablet-landscape) {
+      // @include span(last 4 of 12);
+    }
+  }
+}
+
+.callout + .block {
+  padding-top: vr(2);
+}

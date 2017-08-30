@@ -1,0 +1,32 @@
+////////////////////////
+// Style File
+//
+// This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layouts, modules, and states partials.
+////////////////////////
+
+////////////////////////
+// Base Import
+////////////////////////
+@import 'partials/01-global/index';
+
+////////////////////////
+// Import Modules
+////////////////////////
+@import 'partials/02-components/index';
+
+////////////////////////
+// Import Layouts
+////////////////////////
+@import 'partials/03-layouts/index';
+
+@import "partials/04-nodes/index";
+
+@import "partials/05-views/index";
+
+@import "partials/06-custom-pages/index";
+
+@import "partials/07-ckeditor/index";
+
+////////////////////////
+// Import States
+////////////////////////

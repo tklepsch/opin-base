@@ -1,0 +1,81 @@
+//system messages styles
+
+.region-prefix {
+  margin-top: .5rem;
+}
+.messages {
+  color: palette(text, dark);
+  font-size: .875em;
+  margin: 0 !important;
+  border-radius: 0;
+  box-shadow:none;
+  // padding: 2rem !important;
+
+  @extend %cf;
+
+  ul.messages__list {
+    margin: 0;
+    margin-left: 1rem;
+
+    li:not(:first-child){
+      margin-top: .5rem;
+    }
+
+
+  }
+
+
+  &:before {
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 1em;
+    display: block;
+    float: left;
+    height: 2em;
+    margin-right: 1em;
+    margin-left: -1.5rem;
+    margin-top: -.3em;
+    padding-top: .3rem;
+    speak: none;
+    text-align: center;
+    width: 2em;
+    font-family: Arial!important;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+
+
+  &.messages--status {
+    background-color: palette(messages, ok);
+    background-image: none;
+    border: 0;
+
+    &:before {
+      content: "✔";
+    }
+  }
+
+  &.messages--warning {
+    background-color: palette(messages, warning);
+    background-image: none;
+    border: 0;
+
+    &:before {
+      content: "!";
+      font-family: Arial!important;
+    }
+  }
+
+  &.messages--error {
+    background-color: palette(messages, error);
+    background-image: none;
+    border: 0;
+
+    &:before {
+      content: "!";
+      font-family: Arial!important;
+    }
+  }
+}

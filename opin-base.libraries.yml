@@ -1,0 +1,32 @@
+# Theme styles
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      assets/css/style.css: {}
+
+# Theme js
+global-js:
+  js:
+    assets/js/global.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
+# FONTS
+# To be used if Google fonts used on the site
+# google-fonts:
+#   css:
+#     theme:
+#       '//fonts.googleapis.com/css?family=Rubik:300,400,400i,500,500i,700': { type: external, minified: true }
+
+# LIBRARIES
+
+#Accordion library settings
+accordions:
+  js:
+    js/accordions.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.ui.accordion
+

@@ -1,0 +1,45 @@
+/// Configuration map for susy grid
+/// @group map
+/// @type map
+
+$susy: (
+        flow: ltr, // ltr | rtl
+        output: float, // float | isolate
+        math: fluid, // fluid | static (requires column-width)
+        column-width: false, // false | value
+        container: auto, // length or % | auto
+        container-position: center, // left | center | right | <length> [*2] (grid padding)
+        last-flow: to,
+        columns: 12,
+        gutters: 1/2,
+        gutter-position: before, // before | after | split | inside | inside-static (requires column-width)
+        global-box-sizing: border-box, // content-box | border-box (affects inside/inside-static)
+        debug: (
+                image: hide, //show | hide | show-columns | show-baseline
+                color: rgba(blue, .2),
+                output: overlay, // background | overlay
+                toggle: bottom right, //	right | left and top | bottom
+        ),
+);
+
+///Extra map for guttles grid
+$no-gutter: (
+        gutters: 0
+);
+
+//Setting Box sizing for the site
+@include border-box-sizing;
+
+//Add a grid container
+.region-prefix,
+.layout--main {
+  @include container(1280px);
+}
+
+.region-top,
+.region-footer,
+.region-nav,
+.region-footer-postfix,
+.ultimenu__region {
+  @include container(1440px);
+}

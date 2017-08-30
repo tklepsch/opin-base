@@ -1,0 +1,21 @@
+/// Clearfix hack for wrapping elements around their floated children
+///
+/// @group placeholders
+///
+/// @example
+/// 	@extend %cf;
+///
+
+// clearfix
+%cf {
+  @include cf;
+}
+
+%animate {
+  transition: all .2s;
+}
+
+%example-extend {
+  list-style: none;
+  @extend %animate;
+}
