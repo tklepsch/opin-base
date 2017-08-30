@@ -8,7 +8,7 @@ global-styling:
 # Theme js
 global-js:
   js:
-    assets/js/global.js: {}
+    assets/js/min/global.min.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once

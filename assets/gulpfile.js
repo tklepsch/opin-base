@@ -5,6 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
+var minify = require('gulp-minify');
 
 
 // Server + watching sass and template files
@@ -55,5 +56,19 @@ gulp.task('sass', function() {
     }));
 });
 
+// Gulp Minify - https://github.com/hustxiaoc/gulp-minify
+gulp.task('compress', function() {
+  gulp.src('js/*.js')
+    .pipe(minify({
+        ext:{
+            src:'-debug.js',
+            min:'.min.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: ['.combo.js', '.min.js']
+    }))
+    .pipe(gulp.dest('js/min'))
+});
 
+// Default Task
 gulp.task('default', ['serve']);

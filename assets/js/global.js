@@ -1,7 +1,16 @@
-(function ($) {
-    "use strict";
-    $(document).ready(function () {
-        $("#block-languageswitcher li.fr a").text("FR");
-        $("#block-languageswitcher li.en a").text("EN");
-    });
-})(jQuery);
+/**
+ * @file
+ * Provides responsive behaviors to HTML details elements.
+ */
+
+(function ($, Drupal) {
+
+  Drupal.behaviors.exampleModule = {
+    attach: function (context, settings) {
+      // Code to be run on page load, and
+      // on ajax load added here
+    }
+  };
+
+
+})(jQuery, Drupal);

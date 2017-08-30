@@ -1,31 +1,28 @@
 {
-  "name":                  "opin-base",
-  "version":               "1.0.0",
-  "sasslintConfig":        ".sass-lint.yml",
-  "description":           "For",
-  "main":                  "gulpfile.js",
-  "dependencies":
-  {
-    "breakpoint-sass":   "~2.7.1",
+  "name": "opin-base",
+  "version": "1.0.0",
+  "sasslintConfig": ".sass-lint.yml",
+  "description": "For",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "breakpoint-sass": "~2.7.1",
     "mappy-breakpoints": "~0.2.3",
-    "susy":              "~2.2.12",
-    "typi":              "^3.0.0"
+    "susy": "~2.2.12",
+    "typi": "^3.0.0"
   },
-
-  "devDependencies":
-  {
-    "breakpoint-sass":   "~2.7.1",
-    "browser-sync":      "^2.18.8",
-    "gulp":              "^3.9.1",
+  "devDependencies": {
+    "breakpoint-sass": "~2.7.1",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-plumber":      "^1.1.0",
-    "gulp-sass":         "^3.1.0",
-    "gulp-sourcemaps":   "^2.6.0",
-    "gulp-util":         "^3.0.8",
+    "gulp-minify": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
     "modularscale-sass": "^3.0.2",
-    "sass-lint":         "^1.10.2"
+    "sass-lint": "^1.10.2"
   },
-
-  "author":                "Adrian Rylski",
-  "license":               "ISC"
+  "author": "Adrian Rylski",
+  "license": "ISC"
 }
