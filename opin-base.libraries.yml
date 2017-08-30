@@ -30,3 +30,15 @@ accordions:
     - core/jquery
     - core/jquery.ui.accordion
 
+#Flickity library settings
+flickity:
+  css:
+    theme:
+      vendor/flickity/flickity.min.css: {}
+      # css/lib/themes/default.time.css: {}
+  js:
+    vendor/flickity/flickity.pkgd.min.js: {}
+    asset/js/min/flicks.js: {}
+  dependencies:
+    - core/jquery
+
