@@ -12,7 +12,7 @@ var minify = require('gulp-minify');
 gulp.task('serve', ['sass'], function() {
 
   browserSync.init({
-    proxy: "http://opin-base.dd:8083/",
+    proxy: "http://opin_base.dd:8083/",
     browser: "google chrome"
     // port: 8888,
     // browser: "safari"
