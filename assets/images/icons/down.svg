@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="63px" viewBox="0 0 120 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>down1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="down1" fill="#344146">
+            <g id="Group" transform="translate(10.000000, 2.000000)">
+                <polyline id="Fill-649" points="3 9.17 8.656 3.514 49.828 44.686 91 3.514 96.656 9.17 49.828 56 3 9.17"></polyline>
+                <path d="M49.828,58.828 L0.172,9.172 L8.656,0.688 L49.828,41.858 L91,0.686 L99.484,9.17 L49.828,58.828 L49.828,58.828 Z M5.828,9.172 L49.828,53.172 L93.828,9.17 L91,6.342 L49.828,47.514 L8.656,6.344 L5.828,9.172 L5.828,9.172 Z" id="Fill-650"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,56 @@
+opin-base.phone-portrait:
+  label: small
+  mediaQuery: 'all and (min-width: 320px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+opin-base.phone-landscape:
+  label: land
+  mediaQuery: 'all and (min-width: 568px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+opin-base.tablet-portrait:
+  label: med
+  mediaQuery: 'all and (min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+opin-base.tablet-landscape:
+  label: large
+  mediaQuery: 'all and (min-width: 960px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+opin-base.desktop-small:
+  label: wide
+  mediaQuery: 'all and (min-width: 1024px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+opin-base.desktop-medium:
+  label: wide
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+opin-base.desktop-large:
+  label: mega
+  mediaQuery: 'all and (min-width: 1400px)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
+opin-base.desktop-wide:
+  label: mega
+  mediaQuery: 'all and (min-width: 1700px)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x

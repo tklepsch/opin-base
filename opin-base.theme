@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the opin-base theme.
+ */
+
+use \Drupal\Component\Utility\Html;
+use \Drupal\Core\Template\Attribute;
+use \Drupal\Core\Template\AttributeString;
+use \Drupal\block\Entity\Block;
+use \Drupal\views\Plugin\views\area;
+
+
+require_once dirname(__FILE__) . '/includes/form.inc';
+require_once dirname(__FILE__) . '/includes/html.inc';
+require_once dirname(__FILE__) . '/includes/theme.inc';

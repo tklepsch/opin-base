@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="43px" height="57px" viewBox="0 0 43 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>file-generic</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="file-generic">
+            <path d="M30.485,0.123046875 L1.463,0.123046875 C0.655,0.123046875 0,0.778046875 0,2.04904688 L0,55.1230469 C0,55.4680469 0.655,56.1230469 1.463,56.1230469 L41.537,56.1230469 C42.345,56.1230469 43,55.4680469 43,55.1230469 L43,13.1010469 C43,12.4050469 42.907,12.1810469 42.743,12.0160469 L31.107,0.380046875 C30.942,0.216046875 30.718,0.123046875 30.485,0.123046875" id="Fill-10-Copy" fill="#E9E9E0"></path>
+            <polyline id="Fill-11-Copy" fill="#D9D7CA" points="31 0.274046875 31 12.1230469 42.849 12.1230469 31 0.274046875"></polyline>
+        </g>
+    </g>
+</svg>

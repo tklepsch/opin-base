@@ -1,0 +1,63 @@
+// @import "viewblock--language-switcher",
+
+#block-exposedformsearchpage {
+
+	.block__content{
+		display: inline-block;
+	}
+
+	.form-item--textfield,
+	.form-actions{
+		display: inline;
+	}
+
+	.form-text,
+	.form-submit{
+		width: 0;
+		transition: all 0.5s;
+		padding: 0;
+		border: 0 solid #fff;
+	}
+
+	.form-submit{
+		font-size: 0;
+	}
+
+	.form-text.open--search{
+		width: 300px;
+		border: 1px solid #cccccc;
+	}
+
+	.form-submit.open--search{
+		width: auto;
+		font-size: 100%;
+		border: 1px solid #cccccc;
+		padding: 5px;
+	}
+
+	.form-item--textfield .form-item__label{
+		@include visually-hidden;
+	}
+
+	// button contains text 
+	.search--button{
+		border: 0;
+	  font-size: 0;
+	  margin: 0;
+		content: '';
+		width: 30px;
+		height: 30px;
+		background-color: #000;
+	  background-image: url(../images/icons/search.svg);
+	  background-repeat: no-repeat;
+	  background-size: 30px 30px;
+	  cursor: pointer;
+
+
+	  &:hover,
+	  &:focus{
+	  	background-color: rgba(0, 0, 0, 0.2);
+	  }
+	}
+}
+

@@ -1,81 +1,90 @@
-//system messages styles
+// @file
+// Styles for messages.
 
-.region-prefix {
-  margin-top: .5rem;
-}
 .messages {
-  color: palette(text, dark);
-  font-size: .875em;
-  margin: 0 !important;
-  border-radius: 0;
-  box-shadow:none;
-  // padding: 2rem !important;
-
-  @extend %cf;
-
-  ul.messages__list {
-    margin: 0;
-    margin-left: 1rem;
-
-    li:not(:first-child){
-      margin-top: .5rem;
-    }
+  margin-bottom: vr(1);
+  background-color: #ecf6fa;
+  // border: 1px solid #bcdeee;
+  color: #424242;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  word-wrap: break-word;
+  font-family: $system-font-family !important;
 
 
+  background-repeat: no-repeat;
+  background-size: 55px 55px;
+  background-position: 101.2%  -5px;
+
+
+  a {
+    color: #bcdeee;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: $system-font-family !important;
   }
 
 
-  &:before {
-    background-color: rgba(0, 0, 0, .1);
-    border-radius: 1em;
-    display: block;
-    float: left;
-    height: 2em;
-    margin-right: 1em;
-    margin-left: -1.5rem;
-    margin-top: -.3em;
-    padding-top: .3rem;
-    speak: none;
-    text-align: center;
-    width: 2em;
-    font-family: Arial!important;
+}
+
+.messages__content {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.messages--error {
+  background-color: #ffe6e5;
+  border-color: #ffc5c2;
+  background-image: url('../images/bg/messages-error.svg');
+
+  &::before {
+    // background-image: url('../images/bg/messages-error.svg');
   }
 
-  h2 {
-    margin: 0;
+  a {
+    color: #ff645c;
   }
 
-
-
-  &.messages--status {
-    background-color: palette(messages, ok);
-    background-image: none;
-    border: 0;
-
-    &:before {
-      content: "✔";
-    }
-  }
-
-  &.messages--warning {
-    background-color: palette(messages, warning);
-    background-image: none;
-    border: 0;
-
-    &:before {
-      content: "!";
-      font-family: Arial!important;
+  .messages__item {
+    em:first-child {
+      font-style: normal;
+      font-weight: bold;
     }
   }
+}
 
-  &.messages--error {
-    background-color: palette(messages, error);
-    background-image: none;
-    border: 0;
+.messages--status {
+  background-color: #eff8e6;
+  border-color: #c9e8a9;
+  background-image: url('../images/bg/messages-status.svg');
 
-    &:before {
-      content: "!";
-      font-family: Arial!important;
-    }
+  &::before {
+    // @include svg-background(messages-status);
+    // background-image: url('../images/bg/messages-status.svg');
+    // background-image: url('../images/bg/messages-status.png');
+
+  }
+
+  a {
+    color: #71b02f;
+    font-family: $system-font-family !important;
+  }
+}
+
+.messages--warning {
+  background-color: #fcf8e3;
+  border-color: #faf2cc;
+  background-image: url('../images/bg/messages-warning.svg');
+
+  &::before {
+    // @include svg-background(messages-warning);
+    // background-image: url('../images/bg/messages-status.png');
+  }
+
+  a {
+    color: #8a6d3b;
+    font-family: $system-font-family !important;
   }
 }

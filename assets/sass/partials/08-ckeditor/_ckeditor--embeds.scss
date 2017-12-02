@@ -1,0 +1,21 @@
+//Instagram embed
+div[data-oembed-url*="instagram"] {
+  text-align: center;
+
+  iframe {
+    display: inline-block !important;
+  }
+}
+
+.socialembed__container,
+.videoembed__wrapper {
+  padding-top: vr(1);
+  padding-bottom: vr(1);
+
+  text-align: center;
+
+  .twitter-tweet,
+  iframe{
+    display: inline-block !important;
+  }
+}

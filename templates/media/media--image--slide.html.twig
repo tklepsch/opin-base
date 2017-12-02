@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'media',
+     view_mode ? 'media--display-mode-' ~ view_mode|clean_class,
+  ]
+%}
+
+<article{{ attributes.addclass(classes)|without('role') }}>
+
+  {% if content %}
+    {{ content.image }}
+  {% endif %}
+
+</article>

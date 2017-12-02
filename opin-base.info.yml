@@ -1,0 +1,53 @@
+name:                 opin-base
+type:                 theme
+description:          Based on the opin-base theme, opin-base theme uses elements from various opin projects for the best development experience.
+version:              1.0
+package:              Core
+core:                 '8.x'
+base theme:           stable
+screenshot:           screenshot.png
+
+# Libraries
+libraries:
+  - opin-base/global
+
+# Library overrrides
+libraries-override:
+  system/base:
+    css:
+      component:
+        /core/themes/stable/css/system/components/align.module.css: false
+        /core/themes/stable/css/system/components/clearfix.module.css: false
+        /core/themes/stable/css/system/components/container-inline.module.css: false
+        /core/themes/stable/css/system/components/details.module.css: false
+        /core/themes/stable/css/system/components/fieldgroup.module.css: false
+        /core/themes/stable/css/system/components/hidden.module.css: false
+        /core/themes/stable/css/system/components/item-list.module.css: false
+        /core/themes/stable/css/system/components/nowrap.module.css: false
+        /core/themes/stable/css/system/components/position-container.module.css: false
+        /core/themes/stable/css/system/components/progress.module.css: false
+        /core/themes/stable/css/system/components/reset-appearance.module.css: false
+        /core/themes/stable/css/system/components/resize.module.css: false
+
+# Remove stylesheets
+stylesheets-remove:
+  - core/assets/vendor/jquery.ui/themes/base/tabs.css
+
+
+# CKEditor styles
+ckeditor_stylesheets:
+  - css/ckeditor.css
+
+#Regions
+regions:
+  pre_header:         Pre Header
+  header:             Header
+  navigation:         Navigation
+  prefix:             Prefix
+  sidebar_first:      First sidebar
+  content:            Content
+  pre_footer:         Pre Footer
+  footer:             Footer
+
+
+

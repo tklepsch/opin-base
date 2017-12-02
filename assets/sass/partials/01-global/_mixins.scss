@@ -78,10 +78,18 @@
 /// Clearfix for IE8 & above
 /// @source http://css-tricks.com/snippets/css/clear-fix/
 @mixin cf {
-  &:after {
-    content: "";
-    display: table;
+  &::after {
     clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin cf-important {
+  &::after {
+    clear: both !important;
+    content: '' !important;
+    display: table !important;
   }
 }
 
@@ -145,10 +153,6 @@
 
 /// Changes background color and text color when text is selected
 @mixin selection($bgColor, $textColor) {
-  &::-moz-selection {
-    background: $bgColor;
-    color: $textColor;
-  }
   &::selection {
     background: $bgColor;
     color: $textColor;
@@ -203,4 +207,150 @@
   #{$footer-selector} {
     height: $footer-height;
   }
+}
+
+/// Generic heading styles helpers
+/// @group helpers
+
+@mixin heading {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+
+/// Generic label styles helpers
+/// @group helpers
+
+@mixin label{
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-family: $font-secondary;
+}
+
+
+/// Generic date styles helpers
+/// @group helpers
+@mixin date{
+  font-weight: 300;
+  font-size: .8rem;
+}
+
+/// For adding font icons to elements using CSS pseudo-elements
+/// @author Jayden Seric
+/// @source http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+/// @example
+///   @include icon(both) {
+///     color: gray;
+///    }
+///
+///   @include icon(before, profile, false) {
+///    margin-right: 10px;
+///   }
+///
+///   @include icon(after, address, false) {
+///     margin-left: 10px;
+///   }
+///   a {
+///     @include icon;
+///   }
+
+@mixin icon($position: before, $icon: false, $styles: true) {
+  @if $position == both {
+    $position: 'before, &:after';
+  }
+  // Either a :before or :after pseudo-element, or both, defaulting to :before
+  &:#{$position} {
+    @if $icon {
+      // A particular icon has been specified
+      content: "#{map-get($icons, $icon)}";
+    }
+    @if $styles {
+      // Supportive icon styles required
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-family: 'gob-font';
+    }
+    // Include any extra rules supplied for the pseudo-element
+    @content;
+  }
+}
+
+
+// @file
+// Accessibility mixins
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
+@mixin visually-hidden-important {
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  width: 1px !important;
+  word-wrap: normal !important;
+}
+
+// Turns off the visually-hidden effect.
+@mixin visually-hidden-off {
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+@mixin visually-hidden-off-important {
+  clip: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  position: static !important;
+  width: auto !important;
+}
+
+// Makes an element visible when focused if it also has the visually-hidden styles.
+@mixin focusable {
+  &:active,
+  &:focus {
+    @include visually-hidden-off;
+  }
+}
+
+@mixin focusable-important {
+  &:active,
+  &:focus {
+    @include visually-hidden-off-important;
+  }
+}
+
+// Makes an element completely hidden, visually and to screen readers.
+@mixin hidden {
+  display: none;
+}
+
+@mixin hidden-important {
+  display: none !important;
+}
+
+// Makes an element completely hidden, visually and to screen readers, but
+// maintains its layout.
+@mixin invisible {
+  visibility: hidden;
+}
+
+@mixin invisible-important {
+  visibility: hidden !important;
 }

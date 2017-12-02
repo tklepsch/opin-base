@@ -1,0 +1,88 @@
+$modularscale: (
+  base: 16px,
+  ratio: 1.067
+);
+
+$typi: (
+
+  base: (
+    null: (15px, 1.4),
+    tablet-portrait: (16px),
+    tablet-landscape: (16px),
+    desktop-small: (17px),
+    desktop-medium: (17px),
+    desktop-large: (17px),
+    desktop-wide: (17px),
+  ),
+
+  h1: (
+    null:  (ms(7), 1.3),
+    phone-portrait:  (ms(8)),
+    phone-landscape: (ms(8)),
+    tablet-portrait:   (ms(9), 1.2),
+    tablet-landscape:   (ms(9), 1.2),
+    desktop-small: (ms(10)),
+    desktop-medium:  (ms(11), 1.2),
+    desktop-large:  (ms(11), 1.2),
+    desktop-wide:  (ms(11), 1.2),
+  ),
+
+  h2: (
+    null:  (ms(5), 1.3),
+    phone-portrait:  (ms(6)),
+    phone-landscape:  (ms(6)),
+    tablet-portrait:   (ms(7), 1.2),
+    tablet-landscape:   (ms(7), 1.2),
+    desktop-small: (ms(8)),
+    desktop-medium:  (ms(9), 1.2),
+    desktop-large:  (ms(9), 1.2),
+    desktop-wide:  (ms(9), 1.2),
+  ),
+
+  h3: (
+    null:  (ms(3), 1.3),
+    phone-portrait:  (ms(4)),
+    phone-landscape:  (ms(4)),
+    tablet-portrait:   (ms(5), 1.4),
+    tablet-landscape:   (ms(5), 1.4),
+    desktop-small: (ms(6)),
+    desktop-large:  (ms(7), 1.5),
+    desktop-wide:  (ms(7), 1.5),
+  ),
+
+  h4: (
+    null:  (ms(1), 1.3),
+    phone-portrait:  (ms(2)),
+    phone-landscape:  (ms(2)),
+    tablet-portrait:   (ms(3), 1.2),
+    tablet-landscape:   (ms(3), 1.2),
+    desktop-small: (ms(4)),
+    desktop-medium:  (ms(5), 1.2),
+    desktop-large:  (ms(5), 1.2),
+    desktop-wide:  (ms(5), 1.2),
+  ),
+
+  h5: (
+    null:  (ms(-1), 1.3),
+    phone-portrait:  (ms(0)),
+    phone-landscape:  (ms(0)),
+    tablet-portrait:   (ms(1), 1.2),
+    tablet-landscape:   (ms(1), 1.2),
+    desktop-small: (ms(2)),
+    desktop-medium:  (ms(3), 1.2),
+    desktop-large:  (ms(3), 1.2),
+    desktop-wide:  (ms(3), 1.2)
+  ),
+
+  h6: (
+    null:  (ms(-3), 1.3),
+    phone-portrait:  (ms(-2)),
+    phone-landscape:  (ms(-2)),
+    tablet-portrait:   (ms(-1), 1.2),
+    tablet-landscape:   (ms(-1), 1.2),
+    desktop-small: (ms(0)),
+    desktop-medium:  (ms(1), 1.2),
+    desktop-large:  (ms(1), 1.2),
+    desktop-wide:  (ms(1), 1.2),
+  ),
+);

@@ -1,66 +1,82 @@
-nav.tabs {
-  margin-top: .5rem;
-  margin-bottom: 1rem;
-  @extend %cf;
+.block--tabs {
+  text-align: right;
 
-  li {
-    margin: 0;
-    padding: 0;
+  .block__content ul {
+    @extend %cf;
 
-    a {
-      bottom-bottom: 0 !important;
-      color: palette(tabs, active);
-      display: block;
-      font-size: .6rem;
-      padding: .2rem .6em;
-      text-transform: uppercase;
-      font-weight: 500;
-      letter-spacing: 1px;
-      border: 2px solid palette(tabs, bg);
-      background-color: white;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 
-      &:hover {
-        background-color: palette(tabs, bg);
+    li {
+      display: inline-flex;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      a {
+        display: block;
+
+        padding: .2rem .6em;
+
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        color: $color__tab--active;
+        border: 2px solid $color__tab--bkg;
+        background-color: white;
+
+        font-family: $system-font-family !important;
+        font-size: .7rem;
+        font-weight: 500;
+
         bottom-bottom: 0 !important;
-        color: white;
+
+        &:hover {
+          color: white;
+          background-color: $color__tab--bkg;
+
+          bottom-bottom: 0 !important;
+        }
       }
     }
-  }
 
-  li {
-    &.is-active a {
-      background-color: palette(tabs, bg);
-      color: white;
+    li {
+      &.is-active a {
+        color: white;
+        background-color: $color__tab--bkg;
+      }
     }
-  }
 
-  ul.tabs.primary {
-    // background-color: palette(tabs, bg);
-    margin-bottom: 0;
-    float: left;
-    padding-left: 1rem;
-    @include mappy-bp(tablet-portrait) {
-      float: right;
-      // padding-right: 1rem;
-    };
-  }
+    ul.tabs.primary {
+      @include mappy-bp(tablet-portrait) {
+        float: right;
+      }
 
-  ul.tabs.secondary {
-    // background-color: palette(tabs, bg);
-    clear: both;
-    float: left;
-    padding-left: 1rem;
-    margin-top: .5rem;
-    @include mappy-bp(tablet-portrait) {
-      float: right;
-      // padding-right: 1rem;
-    };
+      float: left;
 
-    a {
-      font-size: .6rem;
-      padding: .1rem .4;
-      font-weight: 500;
+      margin-bottom: 0;
+      padding-left: 1rem;
+    }
 
+    ul.tabs.secondary {
+      @include mappy-bp(tablet-portrait) {
+        float: right;
+      }
+
+      float: left;
+      clear: both;
+
+      margin-top: .5rem;
+      padding-left: 1rem;
+
+      a {
+        padding: .1rem .4;
+
+        font-size: .6rem;
+        font-weight: 500;
+      }
     }
   }
 }

@@ -1,0 +1,19 @@
+/// Configuration map for `breakpoints`
+/// @group map
+/// @type map
+/// @example
+/// 	.test {
+///   	@include mappy-bp(med){
+///        width: 250px;
+///      }
+/// 	}
+$breakpoints: (
+  'phone-portrait'      : 320px,
+  'phone-landscape'     : 568px,
+  'tablet-portrait'     : 768px,
+  'tablet-landscape'    : 960px,
+  'desktop-small'       : 1024px,
+  'desktop-medium'      : 1200px,
+  'desktop-large'       : 1400px,
+  'desktop-wide'        : 1700px,
+);

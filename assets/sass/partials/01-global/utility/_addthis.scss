@@ -1,0 +1,18 @@
+.addthis,
+.sharethis{
+  padding-top: vr(.5);
+  padding-bottom: vr(2);
+
+  a{
+    &:hover{
+      border-bottom: none !important;
+      opacity: .8;
+    }
+  }
+
+  .at-share-btn{
+    &:hover{
+      transform: translateY(0) !important;
+    }
+  }
+}
