@@ -18,11 +18,6 @@
   list-style: none;
 }
 
-%animate {
-  transition: all .3s;
-}
-
-
 // Accessibility utility classes
 %visually-hidden {
   @include visually-hidden;
@@ -53,38 +48,3 @@
 //
 // Site Specific Extends
 //
-
-// Just the fill animation effect. right to left
-%fill-animation{
-  background: linear-gradient(to right, $color__button--orange 50%, $color__button--blue  50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: all 0.25s linear;
-
-  &:hover,
-  &:focus{
-    background-position: right bottom;
-  }
-}
-
-
-// Orange button. Blue hover. On hover, fill background color right to left.
-%button--orange{
-  border: none;
-  padding: vr(0.5) vr(2);
-  // background-color: $color__button--orange;
-  color: #ffffff;
-  border-radius: 0;
-  font-weight: 100;
-  cursor: pointer;
-
-  background: linear-gradient(to right, $color__button--orange 50%, $color__button--blue 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
-  transition: all 0.25s linear;
-
-  &:hover,
-  &:focus{
-    background-position: right bottom;
-  }
-}

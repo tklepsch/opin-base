@@ -1,0 +1,24 @@
+
+// Removing link styles from contextual links
+.contextual-links{
+	width: 100%;
+
+	a {
+	  border-bottom-color: transparent !important;
+
+	  &:hover {
+	    border-bottom-color: transparent !important;
+	  }
+	}
+}
+
+.contextual-links-wrapper {
+
+  a.contextual-links-trigger{
+    border-bottom:1px solid transparent;
+  }
+
+  ul.contextual-links li a {
+    border-bottom:1px solid transparent;
+  }
+}

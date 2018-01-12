@@ -43,43 +43,43 @@
  * @see html.html.twig
  */
 #}
-<div class="l-container">
+<div class="layout__container">
 
-<div class="l-pre-header">
+<div class="layout__pre-header">
       {{ page.pre_header }}
 </div>
 
-  <header class="l-header">
+  <header class="layout__header">
     {{ page.header }}
   </header>
 
   {% if page.navigation %}
-    <nav class="l-navigation" >
+    <nav class="layout__navigation" >
       {{ page.navigation }}
     </nav>
   {% endif %}
 
-  <main class="l-main">
+  <main class="layout__main">
     <a id="main" tabindex="-1"></a>{# link is in html.html.twig #}
 
     {% if page.prefix %}
-      <div class="l-prefix">
+      <div class="layout__prefix">
         {{ page.prefix }}
       </div>
     {% endif %}
 
     {% if page.sidebar_first %}
-      <aside class="l-sidebar-first" >
+      <aside class="layout__sidebar-first" >
         {{ page.sidebar_first }}
       </aside>
     {% endif %}
 
-    <div class="l-content">
+    <div class="layout__content">
       {{ page.content }}
     </div>
 
     {% if page.sidebar_second %}
-      <aside class="l-sidebar-second" >
+      <aside class="layout__sidebar-second" >
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
@@ -88,7 +88,7 @@
   </main>
 
   {% if page.footer %}
-    <footer class="l-footer">
+    <footer class="layout__footer">
       {{ page.footer }}
     </footer>
   {% endif %}

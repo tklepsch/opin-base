@@ -1,11 +1,11 @@
-////////////////////////
-// Layouts Partials
-//
-// Your SMACSS Layouts go here
-// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
-////////////////////////
+// Styling specific to layouts only
 
-.layout--main{
+.l-main,
+.l-header {
+  @include container(desktop-small);
+}
+
+.layout__main{
   margin-top: 2rem;
   margin-bottom: 4rem;
   padding-left: .5rem;
@@ -13,9 +13,7 @@
   clear: both;
 }
 
-
-
-.layout--content {
+.layout__content {
   @extend %cf;
 
   @include span(12 of 12);
@@ -36,7 +34,7 @@
   }
 }
 
-.layout--sidebar-second {
+.layout__sidebar-second {
   @extend %cf;
   padding-top: vr(1);
 
@@ -59,6 +57,3 @@
   }
 }
 
-.callout + .block {
-  padding-top: vr(2);
-}

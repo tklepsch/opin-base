@@ -1,0 +1,110 @@
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  //Basic type set
+  font-family: $base-font-family;
+  color: $color__black--dark;
+  margin: 0;
+}
+
+// Content link styles
+.layout__main a {
+  text-decoration: none;
+  color: $color__blue--dark;
+  border-bottom: 1px dotted $color__blue--dark;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid $color__blue--dark;
+  }
+}
+
+hr{
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-color: $color__blue--dark;
+}
+
+// Setting bold based on custom font
+b,
+strong {
+  font-weight: 500;
+}
+
+li {
+  list-style-position: inside;
+}
+
+/// Hide accessibly h1 on the homepage
+.page-title {
+  .path-frontpage & {
+    // @include is-invisible;
+  }
+}
+
+///Resetting paragraph margins
+p + p{
+  margin-top: vr(.75);
+}
+
+///Use Apex Rounded for all the headings and margin correctins
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: vr(1); // 1 baseline
+  margin-bottom: vr(.25); // .5 baselines
+}
+
+///H1 Styles
+.h1,
+h1 {
+  @include typi('h1');
+  color: $color__blue--dark;
+}
+
+///H2 Styles
+.h2,
+h2 {
+  @include typi('h2');
+  font-weight: 500;
+}
+
+///H3 Styles
+.h3,
+h3 {
+  @include typi('h3');
+  font-weight: 500;
+}
+
+///H4 Styles
+.h4,
+h4 {
+  @include typi('h4');
+  font-weight: 500;
+}
+
+///H5 Styles
+.h5,
+h5 {
+  @include typi('h5');
+  font-weight: 500;
+}
+
+///H6 Styles
+.h6,
+h6 {
+  @include typi('h6');
+  font-weight: 500;
+}

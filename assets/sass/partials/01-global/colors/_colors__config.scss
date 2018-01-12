@@ -1,0 +1,24 @@
+// Naming Convention for colors should be: 
+// 
+// $color__colorname--brightness
+// or for specific instances....
+// $color__element--brightness
+//
+// example: $color__blue--dark: #00000;
+
+
+// Primary
+$color__blue--dark:             #00457c;
+$color__green--dark:            #007f60;
+$color__skyblue:                #05a5d9;
+
+// Secondary
+$color__orange:         				#f7941d;
+$color__magenta:        				#ee3d96;
+$color__lime:                   #62bd46;
+
+$color__black--dark:            #111111;
+$color__black--medium:          #424242;
+$color__black--light:           #4D4D4D;
+
+$color__white:                  #FFFFFF;

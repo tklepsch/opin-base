@@ -32,3 +32,7 @@ $sidebars-gutter: (
 
 //Setting Box sizing for the site
 @include border-box-sizing;
+
+body.adminimal-admin-toolbar{
+  margin-top: 39px;
+}
