@@ -37,7 +37,6 @@
 .messages--error {
   background-color: #ffe6e5;
   border-color: #ffc5c2;
-  background-image: url('../images/bg/messages-error.svg');
 
   &::before {
     // background-image: url('../images/bg/messages-error.svg');
@@ -58,7 +57,6 @@
 .messages--status {
   background-color: #eff8e6;
   border-color: #c9e8a9;
-  background-image: url('../images/bg/messages-status.svg');
 
   &::before {
     // @include svg-background(messages-status);
@@ -76,7 +74,6 @@
 .messages--warning {
   background-color: #fcf8e3;
   border-color: #faf2cc;
-  background-image: url('../images/bg/messages-warning.svg');
 
   &::before {
     // @include svg-background(messages-warning);

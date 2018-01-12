@@ -1,4 +1,4 @@
-var domain = "http://site.dev"; // Set this to your local development domain.
+var domain = "http://site.dd:8083"; // Set this to your local development domain.
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
@@ -14,12 +14,12 @@ var minify = require('gulp-minify');
 gulp.task('serve', ['sass'], function() {
 
   browserSync.init({
-    proxy: domain
+    proxy: domain,
+    browser: "google chrome"
   });
 
   gulp.watch("sass/**/*/*.scss", ['sass']);
-  gulp.watch("../templates/**/*/*.twig").on('change', browserSync.reload);
-  gulp.watch('js/*.js').on('change', browserSync.reload);
+  gulp.watch("templates/**/*/*.twig").on('change', browserSync.reload);
 });
 
 
