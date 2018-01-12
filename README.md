@@ -1,7 +1,7 @@
 ABOUT opin_base
 -----------
 
-opin_base is a theme based on the core Stable theme.
+opin_base is a theme based on the core Stable theme. The goal is to create a reusable base theme that uses elements from the methodology known as BEM. See http://getbem.com/ for more information.
 
 
 INSTALL instructions
@@ -11,94 +11,43 @@ INSTALL instructions
 
 2) Change theme files to match your project’s name. This can be done through a find and replace in your IDE or manually by changing the following file names and the content contained within:
 
-- opin_base.breakpoints.yml
-- opin_base.info.yml
-- opin_base.libraries.yml
-- opin_base.theme
+- yourtheme.breakpoints.yml
+- yourtheme.info.yml
+- yourtheme.libraries.yml
+- yourtheme.theme
 
 GENERAL How-to
 ------
 
-- To use sass, npm install your gulp files from within the assets directory.
+- To use sass, use npm install in the /assets folder to install the relevant GULP folder. You can then run gulp in terminal to start the compiler which will convert the sass files into css.
 
-- All the default theme template files from Classy are included in here. Feel free to delete if not in use. Mostly included to make it easier to find classy template files. Otherwise, copy and modify to your desires.
+- All the default theme template files are based on Stable and adjustments from previous projects we felt were useful. Feel free to delete them if not in use. All core default twig files can be found in core/themes/stable/templates
 
 ## Naming Conventions
 
-Note: need to rewrite as we experience it
+See http://getbem.com/naming/ for more information on naming conventions for the BEM methodology.
 
-### Sass files 
+BEM: BLOCK __ ELEMENT __ MODIFIER
 
-(modifier, view mode)
+Essentially the goal here is for everyone to speak the same css language, which should make it easier for future developers to come in and change without going through the trouble of figuring out what a css class means. Here are some examples in drupal:
 
-  * modifier = block, node, paragraph, etc
-    ** event
-  * view mode = view mode of the node, block, etc. Also the view display.
-    ** teaser
+.node
+.node__title
+.node__title--hidden
 
-  * Example: Event content type node on a full-page view mode. The sass file for this would likely be:
+block = node
+title = element
+hidden = modifier
 
-    *** event--full
+Look familiar? This is similar to how drupal core handles css architecture ( https://www.drupal.org/docs/develop/standards/css/css-architecture-for-drupal-8 ) but more simple. Much of the same concepts can be taken from that article as well.
 
-  * General Notes: 
+Below is an example of how you can apply BEM with Drupal. This is for a Article node with the full view mode display but : 
 
-    ** As you update regions, Make sure to update the sass files, classes, and template files.
+article--full
+article__title--full
+article__read-more--full--hover
 
-### CSS Classes
-
-Should follow a similar structure as Sass files which is based on: modifier--view-mode--element
-
-  * .event--full
-  * .event--full--field-date
-
-However, there are cases where it makes sense to break away from this structure:
-
-  * layout classes.
-  ** Any classes related to the general layout of the page should be prefixed with "l-", the l which stands for "layout". This is to help differentiate layout classes from the rest. Especially since .l classes can handle max width for specific layouts.
-
-  *** Example: l-region
-
-  * Reusable Elements. 
-  ** When you have an element - like a button - which will be reused around the site multiple times. You can make it an Extend or a class or both!
-
-  *** Example: 
-
-      %blue--button {
-        background: blue;
-      }
-
-    // Can then be extended to be used in a class...
-
-      .blue--button {
-        @extend %blue--button;
-      }
-
-    // Can also be extended but slightly modified in another class
-
-      .blue--button--modified{
-        @extend %blue--button;
-        color: white;
-      }
-
-
-  * States.
-  ** When states are involved. For instance, you have a specific class you want to add and remove from an element when it is enabled. For this, you would use: element--state
-
-  *** Example: button--hover
-
-  ** This is particularly useful if you wanted to update an element in javascript.
-  
-
-
-
-  * l-constrain div = max width for layouts
-  ** If it is a general class to be reused around the site, you 
-  * state = hover, active, focus, etc
-  * view mode = …well view mode of the node, block 
-    ** region__example--hover
-    ** example: l-main, l-header
-
-
+You can modify this formula however you need it, but the base concept should remain the same: BLOCK__ELEMENT--MODIFIER
 
 ## Sass Breakpoints
 
