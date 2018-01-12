@@ -6,9 +6,7 @@
 #}
 {% if breadcrumb %}
   <nav class="breadcrumb" role="navigation" aria-labelledby="breadcrumb-label">
-    <h2 class="breadcrumb__title" id="breadcrumb-label">{{ 'You are here'|t }}</h2>
-    {% spaceless %}
-      <span class="breadcrumb__intro">You are here :</span>
+    <h2 id="system-breadcrumb" class="visually-hidden">{{ 'Breadcrumb'|t }}</h2>
       <ol class="breadcrumb__list">
       {% for item in breadcrumb %}
         <li class="breadcrumb__item">
@@ -20,6 +18,5 @@
         </li>
       {% endfor %}
       </ol>
-    {% endspaceless %}
   </nav>
 {% endif %}

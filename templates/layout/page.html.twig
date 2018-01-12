@@ -63,14 +63,10 @@
     <a id="main" tabindex="-1"></a>{# link is in html.html.twig #}
 
     {% if page.prefix %}
-      <div class="l-prefix" id="prefix-complimentary-1" role="complementary" aria-labelledby="prefix-complimentary-1">
+      <div class="l-prefix">
         {{ page.prefix }}
       </div>
     {% endif %}
-
-    <div class="l-content">
-      {{ page.content }}
-    </div>
 
     {% if page.sidebar_first %}
       <aside class="l-sidebar-first" >
@@ -78,13 +74,18 @@
       </aside>
     {% endif %}
 
-  </main>
-
-  {% if page.pre_footer %}
-    <div class="l-pre-footer">
-      {{ page.pre_footer }}
+    <div class="l-content">
+      {{ page.content }}
     </div>
-  {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="l-sidebar-second" >
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+
+  </main>
 
   {% if page.footer %}
     <footer class="l-footer">

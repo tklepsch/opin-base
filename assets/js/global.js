@@ -1,6 +1,7 @@
 /**
  * @file
- * Provides responsive behaviors to HTML details elements.
+ * This file is meant for smaller JavaScript/jQuery snippets used 
+ * throughout the whole site. Example: Sticky Header
  */
 
 (function ($, Drupal) {

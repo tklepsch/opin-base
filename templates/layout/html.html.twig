@@ -40,31 +40,23 @@
 <html{{ html_attributes }} class="no-js">
   <head>
     <head-placeholder token="{{ placeholder_token|raw }}">
-      <title>{{ head_title|safe_join(' | ') }}</title>     
+    <title>{{ head_title|safe_join(' | ') }}</title>     
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+  </head>
+    <body{{ attributes.addclass(body_classes) }}>
+      {# Keyboard navigation/accessibility link to main content section in page.html.twig. #}
 
-      <!-- Touch icons begin -->
-      <link rel="apple-touch-icon" sizes="180x180" href="touch-icons/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="touch-icons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="touch-icons/favicon-16x16.png">
-      <link rel="manifest" href="touch-icons/manifest.json">
-      <link rel="mask-icon" href="touch-icons/safari-pinned-tab.svg" color="#004174">
-      <link rel="shortcut icon" href="touch-icons/favicon.ico">
-      <meta name="msapplication-config" content="touch-icons/browserconfig.xml">
-      <meta name="theme-color" content="#ffffff">
-      <!-- Touch icons end -->
+      <div class="skiplinks">
+        <a href="#main" class="skiplinks__link visually-hidden focusable">  
+          {{ 'Skip to main content'|t }}
+        </a>
+      </div>
 
-      <css-placeholder token="{{ placeholder_token|raw }}">
-        <js-placeholder token="{{ placeholder_token|raw }}"></head>
-        <body{{ attributes.addclass(body_classes) }}>
-          {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-          <div class="skiplinks">
-            <a href="#main" class="skiplinks__link visually-hidden focusable">{{ 'Skip to main content'|t }}</a>
-          </div>
-          {{ page_top }}
-          {{ page }}
-          {{ page_bottom }}
-          <js-bottom-placeholder token="{{ placeholder_token|raw }}"></body>
-        </html>
+      {{ page_top }}
+      {{ page }}
+      {{ page_bottom }}
+
+      <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+    </body>
+  </html>

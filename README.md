@@ -1,7 +1,7 @@
-ABOUT opin-base
+ABOUT opin_base
 -----------
 
-opin-base is a theme based on the core Classy theme.
+opin_base is a theme based on the core Stable theme.
 
 
 INSTALL instructions
@@ -11,10 +11,10 @@ INSTALL instructions
 
 2) Change theme files to match your project’s name. This can be done through a find and replace in your IDE or manually by changing the following file names and the content contained within:
 
-- opin-base.breakpoints.yml
-- opin-base.info.yml
-- opin-base.libraries.yml
-- opin-base.theme
+- opin_base.breakpoints.yml
+- opin_base.info.yml
+- opin_base.libraries.yml
+- opin_base.theme
 
 GENERAL How-to
 ------

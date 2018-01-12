@@ -81,10 +81,6 @@
   ]
 %}
 
-{# {{ attach_library('nu/share-this') }}
-{{ attach_library('nu/back-to-top') }} #}
-
-
 <article{{ attributes.addClass(classes)|without('role') }}>
 
   {{ title_prefix }}
@@ -110,10 +106,5 @@
 
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content }}
-{#     <div class="sharethis">
-      <div class="sharethis-inline-share-buttons"></div>
-    </div> #}
   </div>
-
-<a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 </article>
