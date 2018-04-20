@@ -10,6 +10,7 @@ screenshot:           screenshot.png
 # Libraries
 libraries:
   - opin_base/global
+  - opin_base/google-fonts
 
 # Library overrrides
 libraries-override:
@@ -36,18 +37,18 @@ stylesheets-remove:
 
 # CKEditor styles
 ckeditor_stylesheets:
-  - css/ckeditor.css
+  - assets/css/ckeditor.css
 
 #Regions
 regions:
   pre_header:         Pre Header
   header:             Header
   navigation:         Navigation
-  prefix:             Prefix
-  sidebar_first:      First sidebar
+  content_prefix:     Content Prefix
+  left_sidebar:       Left Sidebar
   content:            Content
-  sidebar_second:     First Second
-  pre_footer:         Pre Footer
+  right_sidebar:      Right Sidebar
+  content_suffix:     Content Suffix
   footer:             Footer
 
 

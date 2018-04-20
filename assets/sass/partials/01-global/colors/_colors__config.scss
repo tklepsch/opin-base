@@ -1,24 +1,24 @@
-// Naming Convention for colors should be: 
-// 
+// Naming Convention for colors should be:
+//
 // $color__colorname--brightness
 // or for specific instances....
 // $color__element--brightness
 //
 // example: $color__blue--dark: #00000;
 
+// Primary Colors
+  $color__black: #000000;
+  $color__white: #FFFFFF;
+  $color__smokey-white: #F5F4F0;
+  $color__grey--light: #3C3C3C;
+  $color__grey--medium: #717074;
+  $color__blue--light: #E5EFF4;
+  $color__blue--dark: #036091;
+  $color__red: #CF0031;
+  $color__yellow: #FFB81C;
 
-// Primary
-$color__blue--dark:             #00457c;
-$color__green--dark:            #007f60;
-$color__skyblue:                #05a5d9;
-
-// Secondary
-$color__orange:         				#f7941d;
-$color__magenta:        				#ee3d96;
-$color__lime:                   #62bd46;
-
-$color__black--dark:            #111111;
-$color__black--medium:          #424242;
-$color__black--light:           #4D4D4D;
-
-$color__white:                  #FFFFFF;
+// Navigation Colors
+$color__nav--hover: $color__grey--light;
+$color__nav--active: $color__grey--light;
+$color__nav--bg: #222222;
+$color__nav--active-border: $color__red;

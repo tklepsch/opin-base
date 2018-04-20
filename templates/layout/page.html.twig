@@ -43,52 +43,56 @@
  * @see html.html.twig
  */
 #}
-<div class="layout__container">
+<div class="l-container">
 
-<div class="layout__pre-header">
+<div class="r-pre-header">
       {{ page.pre_header }}
 </div>
 
-  <header class="layout__header">
+  <header class="r-header">
     {{ page.header }}
   </header>
 
   {% if page.navigation %}
-    <nav class="layout__navigation" >
+    <nav class="r-navigation" >
       {{ page.navigation }}
     </nav>
   {% endif %}
 
-  <main class="layout__main">
+  <main class="l-main">
     <a id="main" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    {% if page.prefix %}
-      <div class="layout__prefix">
-        {{ page.prefix }}
+    {% if page.content_prefix %}
+      <div class="r-content-prefix">
+        {{ page.content_prefix }}
       </div>
     {% endif %}
 
-    {% if page.sidebar_first %}
-      <aside class="layout__sidebar-first" >
-        {{ page.sidebar_first }}
+    {% if page.left_sidebar %}
+      <aside class="r-left-sidebar" >
+        {{ page.left_sidebar }}
       </aside>
     {% endif %}
 
-    <div class="layout__content">
+    <div class="r-content">
       {{ page.content }}
     </div>
 
-    {% if page.sidebar_second %}
-      <aside class="layout__sidebar-second" >
-        {{ page.sidebar_second }}
+    {% if page.right_sidebar %}
+      <aside class="r-right-sidebar" >
+        {{ page.right_sidebar }}
       </aside>
     {% endif %}
 
-
+    {% if page.content_suffix %}
+      <div class="r-content-suffix">
+        {{ page.content_suffix }}
+      </div>
+    {% endif %}
   </main>
 
   {% if page.footer %}
-    <footer class="layout__footer">
+    <footer class="r-footer">
       {{ page.footer }}
     </footer>
   {% endif %}

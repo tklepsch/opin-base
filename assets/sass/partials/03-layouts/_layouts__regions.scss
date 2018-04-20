@@ -1,0 +1,111 @@
+// Styling specific to layouts only
+
+.r-header{
+  background-color: $color__black;
+  color: $color__white;
+  transition: all 0.5s;
+
+  a{
+    color: $color__white;
+  }
+}
+
+.r-navigation{
+  background-color: $color__black;
+  color: $color__white;
+  transition: all 0.5s;
+
+  a{
+    color: white;
+  }
+}
+
+.r-content {
+  @extend %cf;
+  @extend %padding-vertical;
+  margin: 0 auto;
+  transition: all 0.5s;
+
+  .right-sidebar & {
+    @extend %cf;
+
+    @include span(12 of 12);
+
+    @include mappy-bp(tablet-portrait) {
+      @include span(first 8 of 12);
+    }
+
+    @include mappy-bp(tablet-landscape) {
+      // @include span(first 8 of 12);
+    }
+  }
+
+  .left-sidebar & {
+    @extend %cf;
+
+    @include span(12 of 12);
+
+    @include mappy-bp(tablet-portrait) {
+      @include span(after 8 of 12);
+    }
+  }
+
+  .two-sidebars & {
+    @extend %cf;
+
+    @include span(12 of 12);
+
+    @include mappy-bp(tablet-portrait) {
+      @include span(after 4 of 12);
+    }
+  }
+}
+
+.r-left-sidebar {
+  @extend %cf;
+  @extend %padding-vertical;
+
+  @include mappy-bp(tablet-portrait) {
+    padding-top: 0;
+    margin-top: 5rem;
+  };
+
+
+  .left-sidebar & {
+    @include span(12 of 12);
+
+    @include mappy-bp(tablet-portrait) {
+      @include span(first 4 of 12);
+    }
+  }
+}
+
+.r-right-sidebar {
+  @extend %cf;
+  @extend %padding-vertical;
+
+  @include mappy-bp(tablet-portrait) {
+    padding-top: 0;
+    margin-top: 5rem;
+  };
+
+
+  .right-sidebar & {
+    @include span(12 of 12);
+
+    @include mappy-bp(tablet-portrait) {
+      @include span(last 4 of 12);
+    }
+  }
+}
+
+.r-footer{
+  background-color: $color__black;
+  color: $color__white;
+  @extend %padding-vertical;
+  transition: all 0.5s;
+
+  a{
+    color: $color__white;
+  }
+}

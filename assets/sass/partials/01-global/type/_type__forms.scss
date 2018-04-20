@@ -1,0 +1,35 @@
+label{
+  display: block;
+  margin: 3px 0;
+}
+
+.form-item{
+  padding-bottom: 20px;
+}
+
+input{
+  border: 1px solid $color__black;
+  padding: 10px;
+  transition: all 0.5s;
+  max-width: 100%;
+
+  &:focus{
+    outline: none;
+    border: 1px solid $color__yellow;
+  }
+
+  &[type="submit"]{
+    @extend %button--input;
+  }
+}
+
+#edit-cancel{
+  @extend %button--input;
+  text-decoration: none;
+}
+
+#user-login-form{
+  @extend %padding-horizontal;
+  @extend %max-container;
+  padding-bottom: 80px;
+}

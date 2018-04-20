@@ -1,0 +1,25 @@
+// General layout scss.
+//
+// If it doesn't fit in it's own category, put it here
+
+
+.l-container{
+  @extend %cf;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.5s;
+
+  @include mappy-bp(tablet-portrait){
+    padding-left: 156px;
+  }
+
+  @include mappy-bp(tablet-landscape){
+    padding-left: 215px;
+  }
+}
+
+.l-main{
+  @extend %cf;
+  @extend %max-container;
+  @extend %padding-horizontal;
+}

@@ -8,14 +8,14 @@
 @import 'normalize';
 @import "colors/index";
 
+@import 'layout/index';
+@import 'type/index';
+
 @import 'mixins';
 @import 'extends';
-
-@import 'type/index';
-@import 'layout/index';
+@import 'classes';
 
 @import 'functions';
-@import "icons/index";
 @import 'utility/index';
 
 @import 'accessibility';

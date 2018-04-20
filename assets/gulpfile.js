@@ -1,4 +1,4 @@
-var domain = "http://site.dd:8083"; // Set this to your local development domain.
+var domain = "http://site.dev.dd:8083"; // Set this to your local development domain.
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();

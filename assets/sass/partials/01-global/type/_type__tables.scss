@@ -1,0 +1,50 @@
+table{
+  margin: 1em 0;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td{
+  // border: 1px solid $color__black;
+  // border-spacing: 0;
+  padding: 10px;
+}
+
+th{
+  background-color: $color__yellow;
+  color: $color__black;
+  text-align: left;
+}
+
+.tablesaw-stack{
+  display: block;
+  overflow: scroll;
+
+  td{
+
+    .tablesaw-cell-label,
+    .tablesaw-cell-content{
+      word-wrap: break-word;
+      padding: 10px;
+    }
+
+    .tablesaw-cell-label{
+      background-color: $color__yellow;
+      color: $color__black;
+      padding: 10px;
+    }
+  }
+  @include mappy-bp(0 640px){
+    tbody tr{
+      display: block;
+      border-bottom: none;
+      padding: 1rem 0;
+    }
+
+    td{
+      padding: 0;
+    }
+  }
+
+}

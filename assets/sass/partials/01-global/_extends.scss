@@ -48,3 +48,78 @@
 //
 // Site Specific Extends
 //
+
+// Container element to constrain elements to the common maximium width.
+.max-container,
+%max-container{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+
+// Reusable common padding for top and bottom
+.padding-vertical,
+%padding-vertical {
+  padding-top: 1.875rem; // 30px
+  padding-bottom: 5.625rem; // 90px
+
+  @include mappy-bp(tablet-portrait){
+    padding-top: 2.813rem; // 45px
+    padding-bottom: 6.563rem; // 105px
+  }
+
+  @include mappy-bp(tablet-landscape){
+    padding-top: 3.75rem; // 60px
+    padding-bottom: 7.5rem; // 120px
+  }
+}
+
+// Reusable common padding for left and right
+%padding-horizontal,
+.padding-horizontal {
+  padding-left: 1.25rem; // 20px
+  padding-right: 1.25rem; // 20px
+
+  @include mappy-bp(phone-landscape) {
+    padding-left: 4.375rem; // 70px
+    padding-right: 4.375rem; // 70px
+  }
+
+  @include mappy-bp(tablet-portrait){
+    padding-left: 2.5rem; // 40px
+    padding-right: 2.5rem; // 40px
+  }
+}
+
+
+%button--input{
+  display: inline-block;
+  width: 250px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background-color: $color__black;
+  color: $color__white;
+  text-align: center;
+  border: 1px solid $color__black;
+  cursor: pointer;
+  transition: all 0.25s linear;
+
+  &:active{
+    color: $color__black;
+    background-color: $color__yellow;
+    border: 1px solid $color__yellow;
+  }
+
+  &:hover,
+  &:focus{
+    color: $color__white;
+    background-color: $color__red;
+    border: 1px solid $color__white;
+  }
+}

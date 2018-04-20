@@ -37,16 +37,16 @@ function opin_base_preprocess_html(&$variables) {
   }
 
     // Add information about the number of sidebars to body
-  if (!empty(render($variables['page']['sidebar_first'])) && !empty(render($variables['page']['sidebar_second']))) {
+  if (!empty(render($variables['page']['left_sidebar'])) && !empty(render($variables['page']['right_sidebar']))) {
     $variables['attributes']['class'][] = 'two-sidebars';
   }
-  elseif (!empty(render($variables['page']['sidebar_first']))) {
+  elseif (!empty(render($variables['page']['left_sidebar']))) {
     $variables['attributes']['class'][] = 'one-sidebar';
-    $variables['attributes']['class'][] = 'sidebar-first';
+    $variables['attributes']['class'][] = 'left-sidebar';
   }
-  elseif (!empty(render($variables['page']['sidebar_second']))) {
+  elseif (!empty(render($variables['page']['right_sidebar']))) {
     $variables['attributes']['class'][] = 'one-sidebar';
-    $variables['attributes']['class'][] = 'sidebar-second';
+    $variables['attributes']['class'][] = 'right-sidebar';
   }
   else {
     $variables['attributes']['class'][] = 'no-sidebars';

@@ -1,3 +1,8 @@
+html,
+body{
+  height: 100%;
+}
+
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -7,48 +12,38 @@ html {
 body {
   //Basic type set
   font-family: $base-font-family;
-  color: $color__black--dark;
+  color: $color__black;
   margin: 0;
 }
 
-// Content link styles
-.layout__main a {
-  text-decoration: none;
-  color: $color__blue--dark;
-  border-bottom: 1px dotted $color__blue--dark;
-  border-bottom: 1px solid transparent;
+a{
+  color: $color__black;
+  font-weight: bold;
 
-  &:hover {
-    border-bottom: 1px solid $color__blue--dark;
+  &:hover,
+  &:focus{
+    color: $color__red;
   }
 }
 
-hr{
-    display: block;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
-    border-color: $color__blue--dark;
+ul,
+ol{
+  padding: 0 2rem;
+}
+
+.l-main li{
+  margin-bottom: 1rem;
+}
+
+hr {
+  display: block;
+  border-color: $color__black;
 }
 
 // Setting bold based on custom font
 b,
 strong {
-  font-weight: 500;
-}
-
-li {
-  list-style-position: inside;
-}
-
-/// Hide accessibly h1 on the homepage
-.page-title {
-  .path-frontpage & {
-    // @include is-invisible;
-  }
+  font-weight: 600;
 }
 
 ///Resetting paragraph margins
@@ -107,4 +102,62 @@ h5 {
 h6 {
   @include typi('h6');
   font-weight: 500;
+}
+
+
+//
+// Extra Typography Classes
+//
+
+// Accessible keyboard focus (with JS)
+.keyboard-focus input,
+.keyboard-focus select,
+.keyboard-focus button{
+  &:hover,
+  &:focus{
+    border: 2px solid $color__red;
+  }
+}
+
+
+//
+// Misc fixes / enhancements
+//
+
+// links in paragraph or list item styles
+.l-main p a,
+.l-main li a {
+  text-decoration: none;
+  border-bottom: 3px solid $color__red;
+
+  &:hover {
+    color: $color__red;
+  }
+}
+
+// Removing link styles from contextual links
+.contextual-links a {
+  border-bottom-color: transparent !important;
+
+  &:hover {
+    border-bottom-color: transparent !important;
+  }
+}
+
+// IE hack to remove border from linked img
+a img{
+  border: 0px;
+}
+
+// Making all images responsive
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+// IE hack to remove border from linked img
+a img{
+  border: 0px;
+  outline: 0;
 }

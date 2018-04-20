@@ -1,31 +1,40 @@
 // @file
 // Styles for messages.
 
+#block-uor-local-tasks{
+  ul{
+    padding: 0;
+  }
+}
+
 .messages {
   margin-bottom: vr(1);
   background-color: #ecf6fa;
-  // border: 1px solid #bcdeee;
   color: #424242;
   overflow: hidden;
-  padding: 20px;
+  padding: 20px 20px 20px 50px;
   position: relative;
   word-wrap: break-word;
-  font-family: $system-font-family !important;
-
-
-  background-repeat: no-repeat;
-  background-size: 55px 55px;
-  background-position: 101.2%  -5px;
-
 
   a {
     color: #bcdeee;
     font-weight: 600;
     text-decoration: none;
-    font-family: $system-font-family !important;
   }
 
-
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
 }
 
 .messages__content {
@@ -36,38 +45,17 @@
 
 .messages--error {
   background-color: #ffe6e5;
-  border-color: #ffc5c2;
 
-  &::before {
-    // background-image: url('../images/bg/messages-error.svg');
-  }
-
-  a {
-    color: #ff645c;
-  }
-
-  .messages__item {
-    em:first-child {
-      font-style: normal;
-      font-weight: bold;
-    }
+  &:before {
+    background-image: url('../images/help-messages/messages-error.png');
   }
 }
 
 .messages--status {
   background-color: #eff8e6;
-  border-color: #c9e8a9;
 
-  &::before {
-    // @include svg-background(messages-status);
-    // background-image: url('../images/bg/messages-status.svg');
-    // background-image: url('../images/bg/messages-status.png');
-
-  }
-
-  a {
-    color: #71b02f;
-    font-family: $system-font-family !important;
+  &:before {
+    background-image: url('../images/help-messages/messages-status.png');
   }
 }
 
@@ -75,13 +63,7 @@
   background-color: #fcf8e3;
   border-color: #faf2cc;
 
-  &::before {
-    // @include svg-background(messages-warning);
-    // background-image: url('../images/bg/messages-status.png');
-  }
-
-  a {
-    color: #8a6d3b;
-    font-family: $system-font-family !important;
+  &:before {
+    background-image: url('../images/help-messages/messages-warning.png');
   }
 }
