@@ -13,12 +13,12 @@
  */
 #}
 {%
-  set classes, constrain = [
+  set classes = [
     'region-' ~ region|clean_class,
-  ],
+  ]
 %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    {{ content }}
+      {{ content }}
   </div>
 {% endif %}
