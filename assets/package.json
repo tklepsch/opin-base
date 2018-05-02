@@ -1,20 +1,24 @@
 {
-  "name": "opin_base",
+  "name": "uor",
   "version": "1.0.0",
   "sasslintConfig": ".sass-lint.yml",
   "description": "For",
   "main": "gulpfile.js",
   "dependencies": {
+    "babel-core": "^6.26.3",
     "breakpoint-sass": "~2.7.1",
+    "gulp-concat": "^2.6.1",
     "mappy-breakpoints": "~0.2.3",
     "susy": "~2.2.12",
     "typi": "^3.0.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "breakpoint-sass": "~2.7.1",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^7.0.1",
     "gulp-minify": "^1.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
@@ -23,6 +27,6 @@
     "modularscale-sass": "^3.0.2",
     "sass-lint": "^1.10.2"
   },
-  "author": "Adrian Rylski",
+  "author": "Tyler Klepsch",
   "license": "ISC"
 }
