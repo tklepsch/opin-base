@@ -22,7 +22,7 @@
     text-decoration: none;
   }
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -46,7 +46,7 @@
 .messages--error {
   background-color: #ffe6e5;
 
-  &:before {
+  &::before {
     background-image: url('../images/help-messages/messages-error.png');
   }
 }
@@ -54,7 +54,7 @@
 .messages--status {
   background-color: #eff8e6;
 
-  &:before {
+  &::before {
     background-image: url('../images/help-messages/messages-status.png');
   }
 }
@@ -63,7 +63,7 @@
   background-color: #fcf8e3;
   border-color: #faf2cc;
 
-  &:before {
+  &::before {
     background-image: url('../images/help-messages/messages-warning.png');
   }
 }

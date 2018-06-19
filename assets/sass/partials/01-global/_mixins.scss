@@ -188,7 +188,6 @@
   #{$wrapper-selector} {
     min-height: 100%;
     height: auto !important;
-    height: 100%;
     margin-bottom: -$footer-height;
     #{$container-selector} {
       padding: 0 0 $footer-height 0;
@@ -226,25 +225,6 @@
   font-weight: 300;
   font-size: .8rem;
 }
-
-/// For adding font icons to elements using CSS pseudo-elements
-/// @author Jayden Seric
-/// @source http://jaydenseric.com/blog/fun-with-sass-and-font-icons
-/// @example
-///   @include icon(both) {
-///     color: gray;
-///    }
-///
-///   @include icon(before, profile, false) {
-///    margin-right: 10px;
-///   }
-///
-///   @include icon(after, address, false) {
-///     margin-left: 10px;
-///   }
-///   a {
-///     @include icon;
-///   }
 
 @mixin icon($position: before, $icon: false, $styles: true) {
   @if $position == both {

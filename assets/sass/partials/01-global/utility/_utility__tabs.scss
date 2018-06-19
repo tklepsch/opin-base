@@ -31,14 +31,10 @@
         font-size: .7rem;
         font-weight: 500;
 
-        bottom-bottom: 0 !important;
-
         &:hover,
         &:focus {
           color: $color__black;
           background-color: $color__yellow;
-
-          bottom-bottom: 0 !important;
         }
       }
     }
