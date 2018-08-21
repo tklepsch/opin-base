@@ -65,13 +65,8 @@
   @extend %cf;
   @extend %padding-vertical;
 
-  @include mappy-bp(tablet-portrait) {
-    padding-top: 0;
-    margin-top: 5rem;
-  };
-
-
-  .left-sidebar & {
+  .left-sidebar &,
+  .two-sidebars & {
     @include span(12 of 12);
 
     @include mappy-bp(tablet-portrait) {
@@ -84,13 +79,8 @@
   @extend %cf;
   @extend %padding-vertical;
 
-  @include mappy-bp(tablet-portrait) {
-    padding-top: 0;
-    margin-top: 5rem;
-  };
-
-
-  .right-sidebar & {
+  .right-sidebar &,
+  .two-sidebars &{
     @include span(12 of 12);
 
     @include mappy-bp(tablet-portrait) {

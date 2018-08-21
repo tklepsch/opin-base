@@ -1,7 +1,6 @@
 name:                 Opin Base
 type:                 theme
 description:          Based on stable core theme, opin_base theme uses elements from various opin projects for the best development experience.
-version:              1.0
 package:              Core
 core:                 '8.x'
 base theme:           stable
