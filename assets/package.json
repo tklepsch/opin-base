@@ -5,6 +5,7 @@
   "description": "Contains node modules for base theme gulp file, sass, and js",
   "main": "gulpfile.js",
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "adaptive-placeholders": "^1.1.5",
     "aos": "^2.2.0",
     "babel-core": "^6.26.3",

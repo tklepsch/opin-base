@@ -10,6 +10,7 @@ screenshot:           screenshot.png
 # Libraries
 libraries:
   - opin_base/global
+  - opin_base/ES6-polyfill
   - opin_base/google-fonts
 
 # Library overrrides
