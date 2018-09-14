@@ -1,0 +1,39 @@
+.cke_combopanel{
+ width: 200px;
+}
+
+.cke_panel_listItem *{
+  font-size: 1rem !important;
+}
+
+.cke_reset.cke_widget_drag_handler_container{
+  display: block;
+  top: 0 !important;
+  left: 0px;
+  height: 30px !important;
+  width: 30px !important;
+  opacity: 1;
+  background-color: rgba(220, 220, 220, 1) !important;
+  background-repeat: no-repeat !important;
+  background-size: 30px 30px !important;
+
+  &:hover{
+    opacity: 1;
+    height: 30px;
+  }
+
+  > img{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.cke_widget_wrapper{
+  max-width: 400px;
+  max-height: 400px;
+
+  .cke_reset.cke_widget_drag_handler_container{
+    height: 30px;
+    width: 30px;
+  }
+}
