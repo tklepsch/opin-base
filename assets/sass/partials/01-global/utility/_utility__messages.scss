@@ -47,7 +47,7 @@
   background-color: #ffe6e5;
 
   &::before {
-    background-image: url('../images/help-messages/messages-error.png');
+    background-image: url('../images/default/core/icons/error/error.svg');
   }
 }
 
@@ -55,7 +55,7 @@
   background-color: #eff8e6;
 
   &::before {
-    background-image: url('../images/help-messages/messages-status.png');
+    background-image: url('../images/default/core/icons/status/status.svg');
   }
 }
 
@@ -64,6 +64,6 @@
   border-color: #faf2cc;
 
   &::before {
-    background-image: url('../images/help-messages/messages-warning.png');
+    background-image: url('../images/default/core/icons/warning/warning.svg');
   }
 }
